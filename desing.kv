@@ -1,0 +1,208 @@
+#: import RiseInTransition kivy.uix.screenmanager.RiseInTransition
+
+<MiPopup>:
+    title_color: 0, 0, 0, 1
+    title: "App"
+    size_hint: None, None
+    size: 300, 300
+    auto_dismiss: False
+    background: "images/background-popup.png"
+    BoxLayout:
+        orientation: "vertical"
+        Image:
+            source: "images/icon.png"
+            size_hint: 1, 0.7
+        Label:
+            text: "Bienvenido a mi app"
+            halign: "center"
+            font_size: 18
+            color: 0, 0, 0, 1
+        Button:
+            text: "Apagar App"
+            size_hint: 1, 0.3
+            on_release: app.exit()
+        Button:
+            text: "Cerrar"
+            size_hint: 1, 0.3
+            on_release: root.dismiss()
+
+<MiPopup2>:
+    title_color: 0, 0, 0, 1
+    title: "Red"
+    size_hint: None, None
+    size: 300, 300
+    auto_dismiss: False
+    background: "images/background-popup.png"
+    BoxLayout:
+        orientation: "vertical"
+        Image:
+            source: "images/red.png"
+            size_hint: 1, 0.7
+        Label:
+            text: "Menu de red"
+            halign: "center"
+            font_size: 18
+            color: 0, 0, 0, 1
+
+        Button:
+            on_release: app.ip_host()
+            text: "Obtener host o ip"
+            size_hint: 1, 0.3
+        Button:
+            on_release: app.red()
+            text: "Abir opciones de red"
+            size_hint: 1, 0.3
+        Button:
+            text: "Cerrar"
+            size_hint: 1, 0.3
+            on_release: root.dismiss()
+
+
+<Ui>: 
+    MDScreen:
+        name: "screen_principal"
+        md_bg_color: 0,.5,.5,1
+        MDBoxLayout: 
+            orientation: "vertical"
+            MDBoxLayout:
+                size_hint: 1, .2
+                orientation: "horizontal"
+                padding: "10dp"
+                MDCard:
+                    radius:"10dp"
+                    padding: "20dp"
+
+                    MDCard:
+                        on_release:
+                            app.popup()
+                        Image:
+                            source: "images/icon.png"
+
+                    MDCard:
+
+
+                    MDCard:
+                        on_release:
+                            app.popup2()
+                        Image:
+                            source: "images/red.png"
+
+
+            MDGridLayout:
+                cols: 3
+                size_hint: 1, .8
+                padding: ["10dp","10dp","10dp","10dp"]
+                spacing: "10dp"
+
+                MDCard:
+                    radius: "10dp"
+                    spacing: "10dp"
+                    padding: "10dp"
+                    orientation: "vertical"
+                    ripple_behavior: True
+                    on_release:
+                        app.root.transition = RiseInTransition()
+                        app.encript()
+                    Image:
+                        source: "images/encriptar.png"
+
+                    MDLabel: 
+                        text: "Encriptar"
+                        halign: "center"
+                    MDLabel: 
+                        text: "Encriptar archivos del PC"
+                        halign: "center"               
+                
+                MDCard:
+                    radius: "10dp"
+                    spacing: "10dp"
+                    padding: "10dp"
+                    orientation: "vertical"
+                    ripple_behavior: True
+                    on_release:
+                        app.root.transition = RiseInTransition()
+                        app.desencript()
+                    Image:
+                        source: "images/desencriptar.png"
+                    MDLabel: 
+                        text: "Desencriptar"
+                        halign: "center"
+                    MDLabel: 
+                        text: "Desencriptar archivos del PC"
+                        halign: "center"
+
+                MDCard:
+                    radius: "10dp"
+                    spacing: "10dp"
+                    padding: "10dp"
+                    orientation: "vertical"
+                    ripple_behavior: True
+                    on_release:
+                        app.root.transition = RiseInTransition()
+                        app.webOpen()
+                    Image:
+                        source: "images/web.png"
+
+                    MDLabel: 
+                        text: "Pagina Web"
+                        halign: "center"
+                    MDLabel: 
+                        text: "Acceder a la pagina Web"
+                        halign: "center"
+
+                MDCard:
+                    radius: "10dp"
+                    spacing: "10dp"
+                    padding: "10dp"
+                    orientation: "vertical"
+                    ripple_behavior: True
+                    on_release:
+                        app.root.transition = RiseInTransition()
+                        app.terminal()
+                    Image:
+                        source: "images/terminal.png"
+
+                    MDLabel: 
+                        text: "Terminal"
+                        halign: "center"
+                    MDLabel: 
+                        text: "Abrir Terminal"
+                        halign: "center"
+
+                MDCard:
+                    radius: "10dp"
+                    spacing: "10dp"
+                    padding: "10dp"
+                    orientation: "vertical"
+                    ripple_behavior: True
+                    on_release:
+                        app.root.transition = RiseInTransition()
+                        app.powerShell()
+                    Image:
+                        source: "images/powershell.png"
+
+                    MDLabel: 
+                        text: "Power Shell"
+                        halign: "center"
+                    MDLabel: 
+                        text: "Abrir Power Shell"
+                        halign: "center"
+
+                MDCard:
+                    radius: "10dp"
+                    spacing: "10dp"
+                    padding: "10dp"
+                    orientation: "vertical"
+                    ripple_behavior: True
+                    on_release:
+                        app.root.transition = RiseInTransition()
+                        app.visual()
+                    Image:
+                        source: "images/visual.png"
+
+                    MDLabel: 
+                        text: "Visual Studio Code"
+                        halign: "center"
+                    MDLabel: 
+                        text: "Abrir Visual Studio Code"
+                        halign: "center"

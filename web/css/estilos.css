@@ -1,0 +1,488 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    background-image: url("images/fondo.jpg");
+    background-size: cover;
+    line-height: 1.6;
+    margin-top: 0;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.notas-contenedor{
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    margin-left: 400px;
+    top: 0px;
+    z-index: 2;
+}
+
+.notas-recipiente {
+    text-decoration: none
+}
+
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    margin-left: 300px;
+    z-index: 5;
+    display: block;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration-color: #000000;
+}
+
+
+.ico {
+    width: 5%;
+    height: auto;
+}
+
+.ico:hover {
+    width: 6%;
+}
+
+a {
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+a img {
+    vertical-align: middle;
+}
+
+.notas-contenedor {
+    margin-top: 100px;
+    width: 600px;
+    position: absolute;
+    display: block;
+}
+
+
+.apps-contenedor1 {
+    margin-top: 50px;
+    width: 800px;
+}
+.apps-contenedor2 {
+    margin-top: 200px;
+    width: 800px;
+}
+.apps-contenedor3 {
+    margin-top: 350px;
+    width: 800px;
+}
+
+select{
+    margin-bottom: 15px;
+}
+
+hr {
+    color: #000000;
+}
+
+.settings-button:hover {
+    background-color: #555;
+}
+
+.settings-content {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #444444;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000;
+}
+
+.settings-content h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.settings-content p {
+    font-size: 16px;
+}
+
+.cont-svg{
+    top: 8px;
+    right: 5px;
+    width: 55px;
+    height: 50px;
+    position: absolute;
+    visibility: visible;
+    border-radius: 10px;
+}
+
+.cont-svg:hover{
+    background-color: #b8b8b846;
+}
+
+.settings-button {
+	cursor: pointer;
+	top: 0px;
+	right: 0px;
+    visibility: hidden;
+}
+
+
+.settings-button .objeto {
+    right: 3px;
+    width: 50px;
+    height: 50px;
+    fill: rgb(255, 255, 255); 
+    position: absolute;
+    visibility: visible;
+}
+  
+.settings-content {
+    background-color: #444444;
+    border: 1px solid #2e2e2e;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    max-height: 800px; 
+    overflow-y: auto; 
+    position: fixed;
+    z-index: 999; 
+    display: none;
+    overflow: auto;
+}
+
+.settings-content h2 {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #666;
+}
+
+input[type="color"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 15px 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+button:hover {
+    background-color: #004880;
+}
+
+#apply-settings {
+    background-color: #28a745;
+}
+#apply-settings:hover {
+    background-color: #196b2b;
+}
+
+
+#exit-settings {
+    background-color: #ff0707;
+    margin-top: 30px;
+}
+
+#exit-settings:hover {
+  background-color: #8f0101;
+}
+
+.search-input-box {
+	width: 100%;
+	background-color: #2f3640;
+	border-radius: 100px;
+	position: absolute;
+	color: #444444;
+    margin-top: 90px;
+    width: 300px;
+    margin-left: 450px;
+    animation-name: despliegue-barra;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+}
+
+.search-input-box input {
+	width: 150%;
+	border: none;
+	outline: none;
+	border-radius: 120px;
+	height: 55px;
+	padding: 0 60px 0 20px;
+	font-size: 18px;
+    position: absolute;
+    color: #000000;
+}
+
+
+#weather {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    border-radius: 10px;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    transition: all 0.3s ease;
+    animation: despliegueLateral 1.5s ease-in-out;
+    visibility: visible;
+    position: absolute;
+    top: 8px;
+    right: 80px;
+}
+
+#weather:hover{
+    background-color: #b8b8b846;
+}
+
+#weather-temp {
+    font-size: 25px;
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    color: white;
+}
+
+.weather-icon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 5px;
+    right: 57px;
+}
+
+@keyframes despliegue {
+    0%    {height: 0; opacity: 0;}
+    5%    {height: auto; opacity: 0.05;}
+    10%   {height: auto; opacity: 0.1;}
+    15%   {height: auto; opacity: 0.15;}
+    20%   {height: auto; opacity: 0.2;}
+    25%   {height: auto; opacity: 0.25;}
+    30%   {height: auto; opacity: 0.3;}
+    35%   {height: auto; opacity: 0.35;}
+    40%   {height: auto; opacity: 0.4;}
+    45%   {height: auto; opacity: 0.45;}
+    50%   {height: auto; opacity: 0.5;}
+    55%   {height: auto; opacity: 0.55;}
+    60%   {height: auto; opacity: 0.6;}
+    65%   {height: auto; opacity: 0.65;}
+    70%   {height: auto; opacity: 0.7;}
+    75%   {height: auto; opacity: 0.75;}
+    80%   {height: auto; opacity: 0.8;}
+    85%   {height: auto; opacity: 0.85;}
+    90%   {height: auto; opacity: 0.9;}
+    95%   {height: auto; opacity: 0.95;}
+    100%  {height: auto; opacity: 1;}
+  }
+  
+
+
+@keyframes despliegue-barra {
+    0%{margin-top: 0px;}
+    100% {margin-top: 90px;}
+}
+
+main {
+    animation-name: despliegue;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes despliegueLateral{
+      0% {margin-left: 0px;}
+      100% {margin-left: 150px;}
+}
+
+.shortcuts {
+    top: 0px;
+    width: 1000px;
+    height: 100px;
+    position: absolute;
+    z-index: 2;
+    visibility: hidden;
+}
+
+.shortcut1{
+    margin-top: 210px;
+    margin-left: 470px;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+    visibility: visible;
+}
+
+.shortcut1:hover {
+    background-color: #b8b8b846;
+}
+.shortcut2{
+    margin-top: 210px;
+    margin-left: 570px;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+    visibility: visible;
+}
+
+.shortcut2:hover {
+    background-color: #b8b8b846;
+}
+.shortcut3{
+    margin-top: 210px;
+    margin-left: 670px;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer; 
+    visibility: visible;
+}
+
+.shortcut3:hover {
+    background-color: #b8b8b846;
+}
+.shortcut4{
+    margin-top: 210px;
+    margin-left: 770px;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+    visibility: visible;
+    
+}
+
+.shortcut4:hover {
+    background-color: #b8b8b846;
+}
+
+.shortcut-img {
+    width: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.shortcut-cont{
+    width: 70px;
+    height: 70px;
+    margin-top: 10px;
+    margin-left: 16px;
+    border-radius: 50px;
+    background-color: #444444;
+    z-index: 1;
+}
+
+.shortcut-text{
+    text-align: center;
+    color: white;
+
+}
+
+.shortcut-link{
+    width: 65px;
+    height: 100px;
+    position: absolute;
+
+}
+
+  
+
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+}
+
+.contenido-centrado {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 2; 
+    text-align: center;
+}
+
+.overlay {
+    display: block;
+}

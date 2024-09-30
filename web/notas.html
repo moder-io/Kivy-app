@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descripción de tu página web para SEO">
+    <title>New tab</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="css/barra-lateral.css">
+    <link rel="icon" href="" type="image/x-icon">
+</head>
+<body>
+    <header class="mi-header">
+        <div class="contenedor-header">
+            <nav> 
+                <ul> 
+                    <li><a class="header-a" href="index.html">Inicio</a></li>
+                    <li><a class="header-a" href="apps.html">Apps</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class= "notas-contenedor" id= "notas-contenedor">
+        <section>
+            <h2>Notas</h2>
+            <p>Pon notas o recordatorios y pulsa Descargar para descargarlas a downloads.</p>
+            
+            <form id="notas-form">
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                <button type="button" id="descargar-btn">Descargar</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Ultimas notas:</h2>
+            <div id="notas-recipiente" class="notas-recipiente">
+                <!-- carga de notas -->
+            </div>
+        </section>
+    </main> 
+
+    <script src="js\notas-script.js"></script>
+</body>
+</html>
