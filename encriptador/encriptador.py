@@ -67,5 +67,5 @@ def encriptar_carpeta(ruta_carpeta, clave):
 if __name__ == "__main__":
     generar_claves()
     clave = cargar_clave()
-    carpeta_a_encriptar = 'C:/Users/rfran/OneDrive/Encripted'
+    carpeta_a_encriptar = '' #pon tu carpeta
     encriptar_carpeta(carpeta_a_encriptar, clave)
