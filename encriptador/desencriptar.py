@@ -56,5 +56,5 @@ def desencriptar_carpeta(ruta_carpeta, clave):
 
 if __name__ == "__main__":
     clave = cargar_clave()
-    carpeta_a_desencriptar = 'C:/Users/rfran/OneDrive/Encripted'
+    carpeta_a_desencriptar = '' #pon tu carpeta
     desencriptar_carpeta(carpeta_a_desencriptar, clave)
