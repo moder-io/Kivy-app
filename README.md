@@ -11,3 +11,11 @@ Para que la aplicación funcione correctamente, es necesario instalar los siguie
 kivy
 kivymd 
 cryptography
+
+
+## Instalación
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/moder-io/image_downloader.git
+
+2. Ejecuta el archivo run.bat
