@@ -12,7 +12,6 @@ kivy
 kivymd 
 cryptography
 
-
 ## Instalación
 1. Clona este repositorio:
    ```bash
