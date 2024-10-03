@@ -46,14 +46,8 @@ class MainApp(MDApp):
        logger.info("Power Shell abierto")
 
     def webOpen(self):
-        relative_path = 'web/index.html'
-        current_dir = os.getcwd()
-        absolute_path = os.path.join(current_dir, relative_path)
-        file_url = 'file:///' + absolute_path.replace('\\', '/')
-        brave_path = 'C:/Users/rfran/AppData/Local/BraveSoftware/Brave-Browser/Application/brave.exe'
-        webbrowser.register('brave', None, webbrowser.BackgroundBrowser(brave_path))
-        webbrowser.get('brave').open(file_url)
-        logger.info("Página web abierta")
+        url = "https://github.com"
+        webbrowser.open(url)
 
     def visual(self):
         code_path = "C:/Users/rfran/AppData/Local/Programs/Microsoft VS Code/Code.exe"
@@ -64,7 +58,7 @@ class MainApp(MDApp):
         self.theme_cls.theme_style = "Dark"
         self.theme_cls.primary_palette = "Teal"
         Builder.load_file("desing.kv")
-        return Ui()
+        return Ui() 
 
     def popup(self):
         popup = MiPopup()
