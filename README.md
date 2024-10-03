@@ -5,12 +5,9 @@ Este proyecto es un **portal de trabajo para programadores**, desarrollado con K
 ## Requisitos
 
 Para que la aplicación funcione correctamente, es necesario instalar los siguientes paquetes:
-
-
-```python
-kivy
-kivymd 
-cryptography
+   - kivy
+   - kivymd 
+   - cryptography
 
 ## Instalación
 1. Clona este repositorio:
