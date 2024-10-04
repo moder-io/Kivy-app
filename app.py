@@ -4,7 +4,6 @@ from kivy.lang import Builder
 from kivy.uix.popup import Popup
 import webbrowser, subprocess, logging, os
 
-
 logger = logging.getLogger() 
 logger.setLevel(logging.INFO)
 file_handler = logging.FileHandler('logs.log')
@@ -48,6 +47,7 @@ class MainApp(MDApp):
     def webOpen(self):
         url = "https://github.com"
         webbrowser.open(url)
+        logger.info("github abierto")
 
     def visual(self):
         code_path = "C:/Users/rfran/AppData/Local/Programs/Microsoft VS Code/Code.exe"
@@ -63,10 +63,12 @@ class MainApp(MDApp):
     def popup(self):
         popup = MiPopup()
         popup.open()
+        logger.info("popup abierto")
      
     def popup2(self):
         popup = MiPopup2()
         popup.open()
+        logger.info("popup2 abierto")
 
     def ip_host(self):
         ruta_bat = 'red/ip o host.bat'
