@@ -70,16 +70,6 @@ class MainApp(MDApp):
         popup.open()
         logger.info("popup2 abierto")
 
-    def ip_host(self):
-        ruta_bat = 'red/ip o host.bat'
-        os.system('start cmd /k "{}"'.format(ruta_bat))
-        logger.info("ip_host ejecutado")
-
-    def red(self):
-        ruta_bat = 'red/red config.bat'
-        os.system('start cmd /k "{}"'.format(ruta_bat))
-        logger.info("gestor de red ejecutado")
-
     def exit(self):
         self.stop()
 

@@ -26,37 +26,6 @@
             size_hint: 1, 0.3
             on_release: root.dismiss()
 
-<MiPopup2>:
-    title_color: 0, 0, 0, 1
-    title: "Red"
-    size_hint: None, None
-    size: 300, 300
-    auto_dismiss: False
-    background: "images/background-popup.png"
-    BoxLayout:
-        orientation: "vertical"
-        Image:
-            source: "images/red.png"
-            size_hint: 1, 0.7
-        Label:
-            text: "Menu de red"
-            halign: "center"
-            font_size: 18
-            color: 0, 0, 0, 1
-
-        Button:
-            on_release: app.ip_host()
-            text: "Obtener host o ip"
-            size_hint: 1, 0.3
-        Button:
-            on_release: app.red()
-            text: "Abir opciones de red"
-            size_hint: 1, 0.3
-        Button:
-            text: "Cerrar"
-            size_hint: 1, 0.3
-            on_release: root.dismiss()
-
 
 <Ui>: 
     MDScreen:
@@ -78,14 +47,6 @@
                         Image:
                             source: "images/icon.png"
 
-                    MDCard:
-
-
-                    MDCard:
-                        on_release:
-                            app.popup2()
-                        Image:
-                            source: "images/red.png"
 
 
             MDGridLayout:
