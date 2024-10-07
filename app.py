@@ -17,10 +17,6 @@ class Ui(ScreenManager):
 class MiPopup(Popup):
     pass
 
-class MiPopup2(Popup):
-    pass
-
-
 class MainApp(MDApp):
 
     icon = "images/icon.png"
@@ -64,11 +60,6 @@ class MainApp(MDApp):
         popup = MiPopup()
         popup.open()
         logger.info("popup abierto")
-     
-    def popup2(self):
-        popup = MiPopup2()
-        popup.open()
-        logger.info("popup2 abierto")
 
     def exit(self):
         self.stop()
