@@ -4,6 +4,7 @@ from kivy.lang import Builder
 from kivy.uix.popup import Popup
 import webbrowser, subprocess, logging, os
 
+
 logger = logging.getLogger() 
 logger.setLevel(logging.INFO)
 file_handler = logging.FileHandler('logs.log')
@@ -11,11 +12,14 @@ formatter = logging.Formatter('%(asctime)s - %(message)s')
 file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
 
+
 class Ui(ScreenManager): 
     pass
 
+
 class MiPopup(Popup):
     pass
+
 
 class MainApp(MDApp):
 
@@ -68,5 +72,6 @@ class MainApp(MDApp):
 if __name__ == "__main__":
     app = MainApp()
     app.run()
+
 
 logging.shutdown() 
