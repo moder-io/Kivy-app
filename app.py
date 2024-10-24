@@ -65,7 +65,7 @@ class MainApp(MDApp):
         popup.open()
         logger.info("popup abierto")
 
-    def exit(self):
+    def exit(self): 
         self.stop()
 
 
