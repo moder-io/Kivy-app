@@ -23,36 +23,44 @@ class MiPopup(Popup):
 
 class MainApp(MDApp):
 
+
     icon = "images/icon.png"
     title = "App"
+
 
     def encript(self):
         ruta_script = "encriptador/encriptador.py"
         subprocess.Popen(["python", ruta_script], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         logger.info('Usuario encripto')
 
+
     def desencript(self):
         ruta_script = "encriptador/desencriptar.py"
         subprocess.Popen(["python", ruta_script], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         logger.info('Usuario desencripto')
 
+
     def terminal(self):
        os.system("start cmd.exe")
        logger.info("Terminal abierto")
 
+
     def powerShell(self):
        os.system("start powershell.exe")
        logger.info("Power Shell abierto")
+
 
     def webOpen(self):
         url = "https://github.com"
         webbrowser.open(url)
         logger.info("github abierto")
 
+
     def visual(self):
         code_path = "C:/Users/rfran/AppData/Local/Programs/Microsoft VS Code/Code.exe"
         os.system(f'start "" "{code_path}"')
         logger.info("Visual Studio Code abierto")
+
 
     def build(self):
         self.theme_cls.theme_style = "Dark"
@@ -60,10 +68,12 @@ class MainApp(MDApp):
         Builder.load_file("desing.kv")
         return Ui() 
 
+
     def popup(self):
         popup = MiPopup()
         popup.open()
         logger.info("popup abierto")
+
 
     def exit(self): 
         self.stop()
