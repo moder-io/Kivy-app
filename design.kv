@@ -1,0 +1,133 @@
+#: import RiseInTransition kivy.uix.screenmanager.RiseInTransition
+
+<MiPopup>:
+    title_color: 0, 0, 0, 1
+    title: "App"
+    size_hint: None, None
+    size: 300, 300
+    auto_dismiss: False
+    background: app.resource_path("images/background-popup.png")
+    BoxLayout:
+        orientation: "vertical"
+        Image:
+            source: "images/icon.png"
+            size_hint: 1, 0.7
+        Label:
+            text: "Bienvenido a mi app"
+            halign: "center"
+            font_size: 18
+            color: 0, 0, 0, 1
+        Button:
+            text: "Apagar App"
+            size_hint: 1, 0.3
+            on_release: app.exit()
+        Button:
+            text: "Cerrar"
+            size_hint: 1, 0.3
+            on_release: root.dismiss()
+
+
+<Ui>: 
+    MDScreen:
+        name: "screen_principal"
+        md_bg_color: 0,.5,.5,1
+        MDBoxLayout: 
+            orientation: "vertical"
+            MDBoxLayout:
+                size_hint: 1, .2
+                orientation: "horizontal"
+                padding: "10dp"
+                MDCard:
+                    radius:"10dp"
+                    padding: "20dp"
+
+                    MDCard:
+                        on_release:
+                            app.popup()
+                        Image:
+                            source: app.resource_path("images/icon.png")
+
+
+
+            MDGridLayout:
+                cols: 2
+                size_hint: 1, .8
+                padding: ["10dp","10dp","10dp","10dp"]
+                spacing: "10dp"
+
+
+                MDCard:
+                    radius: "10dp"
+                    spacing: "10dp"
+                    padding: "10dp"
+                    orientation: "vertical"
+                    ripple_behavior: True
+                    on_release:
+                        app.root.transition = RiseInTransition()
+                        app.webOpen()
+                    Image:
+                        source: app.resource_path("images/github.png")
+
+                    MDLabel: 
+                        text: "Git Hub"
+                        halign: "center"
+                    MDLabel: 
+                        text: "Acceder a Git Hub"
+                        halign: "center"
+
+                MDCard:
+                    radius: "10dp"
+                    spacing: "10dp"
+                    padding: "10dp"
+                    orientation: "vertical"
+                    ripple_behavior: True
+                    on_release:
+                        app.root.transition = RiseInTransition()
+                        app.terminal()
+                    Image:
+                        source: app.resource_path("images/terminal.png")
+
+                    MDLabel: 
+                        text: "Terminal"
+                        halign: "center"
+                    MDLabel: 
+                        text: "Abrir Terminal"
+                        halign: "center"
+
+                MDCard:
+                    radius: "10dp"
+                    spacing: "10dp"
+                    padding: "10dp"
+                    orientation: "vertical"
+                    ripple_behavior: True
+                    on_release:
+                        app.root.transition = RiseInTransition()
+                        app.powerShell()
+                    Image:
+                        source: app.resource_path("images/powershell.png")
+
+                    MDLabel: 
+                        text: "Power Shell"
+                        halign: "center"
+                    MDLabel: 
+                        text: "Abrir Power Shell"
+                        halign: "center"
+
+                MDCard:
+                    radius: "10dp"
+                    spacing: "10dp"
+                    padding: "10dp"
+                    orientation: "vertical"
+                    ripple_behavior: True
+                    on_release:
+                        app.root.transition = RiseInTransition()
+                        app.visual()
+                    Image:
+                        source: app.resource_path("images/visual.png")
+
+                    MDLabel: 
+                        text: "Visual Studio Code"
+                        halign: "center"
+                    MDLabel: 
+                        text: "Abrir Visual Studio Code"
+                        halign: "center"
