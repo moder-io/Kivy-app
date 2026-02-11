@@ -1,1 +1,4 @@
-Releases/
+dist/
+app.spec
+build/
+images/icon.ico
