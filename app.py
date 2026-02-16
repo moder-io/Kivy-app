@@ -2,13 +2,11 @@ import os
 import sys
 from pathlib import Path
 
-
 if sys.platform.startswith("win"):
     base = Path(os.getenv("LOCALAPPDATA", Path.home()))
     os.environ["KIVY_HOME"] = str(base / "App")
 else:
     os.environ["KIVY_HOME"] = str(Path.home() / ".App")
-
 
 from kivymd.app import MDApp
 from kivy.uix.screenmanager import ScreenManager
